@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "cd48d5a5-de1a-45a8-ad7b-96df0c3872ba",
+		"name": "MovieService No OAuth",
+		"description": "All the API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "biraj",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "biraj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mod\",\r\n    \"email\": \"mod@biraj.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": [\"mod\", \"user\"]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/movieservice/allmovies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"movieservice",
+						"allmovies"
+					]
+				},
+				"description": "GET request"
+			},
+			"response": []
+		},
+		{
+			"name": "Get movie by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/movieservice/movie/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"movieservice",
+						"movie",
+						"1"
+					]
+				},
+				"description": "GET request by movieId"
+			},
+			"response": []
+		},
+		{
+			"name": "Add movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"movie_name\": \"The Great Gatsby\",\r\n        \"movie_desc\": \"Splendid Acting\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/movieservice/addmovie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"movieservice",
+						"addmovie"
+					]
+				},
+				"description": "POST request with movie body\r\nExample:\r\n{\r\n        \"movie_name\": \"Robin\",\r\n        \"movie_desc\": \"Bad movie\"\r\n\r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Update movie details based on ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieId\": 1,\r\n    \"movie_name\": \"Robin\",\r\n    \"movie_desc\": \"Terrible movie\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/movieservice/updatemovie/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"movieservice",
+						"updatemovie",
+						"1"
+					]
+				},
+				"description": "PUT request"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete movie by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/movieservice/deleteMovie/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"movieservice",
+						"deleteMovie",
+						"3"
+					]
+				},
+				"description": "DELETE request"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "690fd3ac-c9f7-42b4-8b31-19d336ab7e3a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "55ed70e0-4d4b-4652-ab56-53a986eef574",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

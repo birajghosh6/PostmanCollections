@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "d817c018-3a4b-444f-b4d0-17affc994de7",
+		"name": "RatingService No OAuth",
+		"description": "Ratings given by user to movies from MovieService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get user's rated movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9092/ratingservice/allratings/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"ratingservice",
+						"allratings",
+						"4"
+					]
+				},
+				"description": "GET request to obtain a user's rated movies alongwith their ratings"
+			},
+			"response": []
+		},
+		{
+			"name": "Add rating for a particular movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"movieId\": \"5\",\r\n        \"userId\": \"2\",\r\n        \"rating\": \"5\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9092/ratingservice/addrating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"ratingservice",
+						"addrating"
+					]
+				},
+				"description": "POST mapping for adding a rating for a particular movie"
+			},
+			"response": []
+		},
+		{
+			"name": "Update rating",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ratingId\": 2,\r\n        \"movieId\": \"3\",\r\n        \"userId\": \"1\",\r\n        \"rating\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9092/ratingservice/updaterating/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"ratingservice",
+						"updaterating",
+						"2"
+					]
+				},
+				"description": "PUT mapping for updating a rating"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete rating using ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9092/ratingservice/deleterating/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"ratingservice",
+						"deleterating",
+						"4"
+					]
+				},
+				"description": "DELETE mapping for deleting a particular rating"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0d32c7f5-39cc-4fdb-8255-f60966016795",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "26b88c5d-ee96-4781-914b-faf776ca699a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "a78794e1-08c8-48ef-aa02-22f16a66bddf",
+		"name": "MovieCatalog No OAuth",
+		"description": "Shows all movies and ratings of each user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/catalog/showmovies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catalog",
+						"showmovies"
+					]
+				},
+				"description": "GET request"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user's rated movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/catalog/showratedmovie/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catalog",
+						"showratedmovie",
+						"4"
+					]
+				},
+				"description": "GET request to obtain a user's rated movies alongwith their ratings"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fc30d399-fe13-43cf-8455-677a4ca772e4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "496cb917-b7c9-49f8-b169-03c75da05069",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
